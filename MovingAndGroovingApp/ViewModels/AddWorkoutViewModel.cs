@@ -19,7 +19,8 @@ public class AddWorkoutViewModel : BaseViewModel
         "Weightlifting", 
         "Cycling", 
         "Dog Walk",
-        "Elliptical"
+        "Elliptical",
+        "Tennis"
     };
 
     private string _selectedWorkoutType;

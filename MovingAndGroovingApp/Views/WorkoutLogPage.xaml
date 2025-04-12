@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MovingAndGroovingApp.Views.WorkoutLogPage"
-             Title="WorkoutLogPage">
+             Title="WorkoutLogPage"
+             BackgroundColor="#2E2E2E">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Log Workout"
@@ -10,13 +11,29 @@
                      Order="Primary"/>
     </ContentPage.ToolbarItems>
 
-    <CollectionView ItemsSource="{Binding Workouts}">
+    <CollectionView ItemsSource="{Binding Workouts}"
+                    Margin="10,10,10,10"
+                    SelectionMode="Single">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" ItemSpacing="15"/>
+        </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <VerticalStackLayout BackgroundColor="GhostWhite">
-                    <Label Text="{Binding WorkoutType}"/>
-                    <Label Text="{Binding Minutes}"/>
-                    <Label Text="{Binding Date, StringFormat='{}{0:MMM dd, yyyy}'}" />
+                <VerticalStackLayout BackgroundColor="#A9A9A9"
+                    Padding="15">
+
+                    <Label Text="{Binding WorkoutType}"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#8B0000"/>
+
+                    <Label Text="{Binding Minutes, StringFormat='{0} mins'}"
+                           FontSize="16"
+                           TextColor="#505050"/>
+
+                    <Label Text="{Binding Date, StringFormat='{}{0:MMM dd, yyyy}'}"
+                           FontSize="14"
+                           TextColor="#696969"/>
                 </VerticalStackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>

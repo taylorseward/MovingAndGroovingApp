@@ -20,7 +20,8 @@ public class AddWorkoutViewModel : BaseViewModel
         "Cycling", 
         "Dog Walk",
         "Elliptical",
-        "Tennis"
+        "Tennis",
+        "Swimming"
     };
 
     private string _selectedWorkoutType;

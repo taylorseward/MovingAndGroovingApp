@@ -34,6 +34,10 @@ namespace MovingAndGroovingApp
             builder.Services.AddSingleton<LoginViewModel>();
             builder.Services.AddSingleton<RegisterViewModel>();
 
+            // Home
+            builder.Services.AddSingleton<HomePage>();
+            builder.Services.AddSingleton<HomeViewModel>();
+
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

@@ -8,7 +8,7 @@
 
     <ScrollView >
         <VerticalStackLayout Padding="10" Spacing="15" BackgroundColor="GhostWhite">
-            <Image Source="logo.png" 
+            <Image Source="logo_color.png" 
                HeightRequest="450" 
                WidthRequest="450"/>
             <Entry Text="{Binding Username}" 

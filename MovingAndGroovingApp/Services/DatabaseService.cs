@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using MovingAndGroovingApp.Models;
+using MovingAndGroovingApp.Services;
 
 namespace MovingAndGroovingApp.Services
 {
@@ -68,6 +69,28 @@ namespace MovingAndGroovingApp.Services
         public async Task DeleteWorkoutAsync(WorkoutLog workoutLog)
         {
             await _database.DeleteAsync(workoutLog);
+        }
+
+        // user
+        public Task<User> GetCurrentUserAsync()
+        {
+            var currentUserId = SessionManager.GetCurrentUserId();
+            if (currentUserId.HasValue)
+            {
+                return _database.Table<User>().Where(u => u.Id == currentUserId.Value).FirstOrDefaultAsync();
+            }
+            return Task.FromResult(UserService.Instance.CurrentUser);
+        }
+        public Task<User> GetUserAsync(string username, string password)
+        {
+            return _database.Table<User>().Where(u => u.UserName == username && u.Password == password).FirstOrDefaultAsync();
+
+
+        }
+
+        public Task<int> SaveUserAsync(User user)
+        {
+            return _database.InsertAsync(user);
         }
     }
 }

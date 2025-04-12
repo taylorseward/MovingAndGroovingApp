@@ -20,11 +20,15 @@ public partial class AddWorkoutPage : ContentPage
     {
         var viewModel = (AddWorkoutViewModel)BindingContext;
 
-        if (int.TryParse(minutesEntry.Text, out int minutes))
+        bool isMinutesValid = int.TryParse(minutesEntry.Text, out int minutes);
+        bool isHoursValid = int.TryParse(hoursEntry.Text, out int hours);
+
+        if (isMinutesValid && isHoursValid)
         {
             var workout = new WorkoutLog
             {
                 WorkoutType = viewModel.SelectedWorkoutType,
+                Hours = hours,
                 Minutes = minutes,
                 Date = viewModel.WorkoutDate
             };
@@ -35,9 +39,10 @@ public partial class AddWorkoutPage : ContentPage
         }
         else
         {
-            await DisplayAlert("Error", "Please enter valid minutes.", "OK");
+            await DisplayAlert("Error", "Please enter valid hours and minutes.", "OK");
         }
     }
+
 
     private async void OnBackClicked(object sender, EventArgs e)
     {

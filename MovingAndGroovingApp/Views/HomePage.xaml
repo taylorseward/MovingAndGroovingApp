@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovingAndGroovingApp.Views.HomePage"
+             xmlns:viewmodels="clr-namespace:MovingAndGroovingApp.ViewModels"
+             Title="HomePage">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="15" BackgroundColor="GhostWhite">
+            <Image Source="logo_color.png" 
+            HeightRequest="450" 
+            WidthRequest="450"/>
+            <Label 
+                Text="{Binding WelcomeMessage}"
+                FontSize="24"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"/>
+            <Button Text="Your Workouts" 
+                Clicked="OnWorkoutsClicked" 
+                WidthRequest="450" 
+                BackgroundColor="CornflowerBlue" 
+                FontSize="20"/>
+            <VerticalStackLayout>
+                <Label Text="© Moving And Grooving Bay Bay! - 2025" 
+               HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

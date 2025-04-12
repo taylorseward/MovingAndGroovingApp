@@ -15,6 +15,12 @@
                     WidthRequest="450"
                     HorizontalTextAlignment="Center"/>
 
+            <Entry x:Name="hoursEntry"
+                    Placeholder="Hours"
+                    Keyboard="Numeric"
+                    WidthRequest="450"
+                    HorizontalTextAlignment="Center"
+                    FontSize="20"/>
             <Entry x:Name="minutesEntry"
                    Placeholder="Minutes"
                    Keyboard="Numeric"

@@ -3,17 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:MovingAndGroovingApp.ViewModels"
              x:Class="MovingAndGroovingApp.Views.AddWorkoutPage"
-             Title="Log Workout">
+             Title="Log Workout"
+             BackgroundColor="#2E2E2E">
 
     <ScrollView>
-        <VerticalStackLayout Padding="10" Spacing="15" BackgroundColor="GhostWhite">
+        <VerticalStackLayout Padding="10" Spacing="15" BackgroundColor="#2E2E2E">
             <Picker x:Name="workoutTypePicker"
                     Title="Workout Type"
                     ItemsSource="{Binding WorkoutTypes}"
                     SelectedItem="{Binding SelectedWorkoutType, Mode=TwoWay}"
                     FontSize="20"
                     WidthRequest="450"
-                    HorizontalTextAlignment="Center"/>
+                    HorizontalTextAlignment="Center"
+                    BackgroundColor="#A9A9A9"
+                    TextColor="#8B0000"/>
 
             <Entry x:Name="hoursEntry"
                     Placeholder="Hours"
@@ -26,25 +29,32 @@
                    Keyboard="Numeric"
                    WidthRequest="450"
                    HorizontalTextAlignment="Center"
-                   FontSize="20"/>
+                   FontSize="20"
+                   BackgroundColor="#A9A9A9"
+                   TextColor="#8B0000"
+                   PlaceholderColor="#505050"/>
 
             <DatePicker x:Name="datePicker"
                         Date="{Binding WorkoutDate, Mode=TwoWay}"
                         WidthRequest="450"
                         FontSize="20"
-                        HorizontalOptions="Center"/>
+                        HorizontalOptions="Center"
+                        BackgroundColor="#A9A9A9"
+                        TextColor="#8B0000"/>
 
             <Button Text="Save"
                     Clicked="OnSaveClicked"
                     WidthRequest="450"
-                    BackgroundColor="CornflowerBlue"
-                    FontSize="20"/>
+                    BackgroundColor="#8B0000"
+                    FontSize="20"
+                    TextColor="White"/>
 
             <Button Text="Go Back"
                     Clicked="OnBackClicked"
                     WidthRequest="450"
-                    BackgroundColor="CornflowerBlue"
-                    FontSize="20"/>
+                    BackgroundColor="#8B0000"
+                    FontSize="20"
+                    TextColor="White"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -5,35 +5,41 @@
              xmlns:viewmodels="clr-namespace:MovingAndGroovingApp.ViewModels"
              Title="RegisterPage">
     <ScrollView>
-        <VerticalStackLayout Padding="10" Spacing="15" BackgroundColor="GhostWhite">
+        <VerticalStackLayout Padding="10" Spacing="15" BackgroundColor="#A9A9A9">
             <Image Source="logo_color.png" 
                HeightRequest="450" 
                WidthRequest="450"/>
             <Entry Text="{Binding Username}" 
            Placeholder="Username" 
            WidthRequest="450"
-           HorizontalTextAlignment="Center"/>
+           HorizontalTextAlignment="Center"
+           TextColor="#8B0000"
+           BackgroundColor="Transparent"/>
             <Entry Text="{Binding FirstName}" 
            Placeholder="First Name" 
            WidthRequest="450"
-           HorizontalTextAlignment="Center"/>
+           HorizontalTextAlignment="Center"
+           TextColor="#8B0000"/>
             <Entry Text="{Binding LastName}" 
            Placeholder="Last Name" 
            WidthRequest="450"
-           HorizontalTextAlignment="Center"/>
+           HorizontalTextAlignment="Center"
+           TextColor="#8B0000"/>
             <Entry Text="{Binding Password}" 
            Placeholder="Password" 
            IsPassword="True" 
            WidthRequest="450"
-           HorizontalTextAlignment="Center"/>
+           HorizontalTextAlignment="Center"
+           TextColor="#8B0000"/>
             <Button Text="Register" 
             Command="{Binding RegisterCommand}" 
             WidthRequest="450" 
-            BackgroundColor="CornflowerBlue" 
+            BackgroundColor="#8B0000" 
             FontSize="20"/>
             <VerticalStackLayout>
                 <Label Text="© Moving And Grooving Bay Bay! - 2025" 
-               HorizontalTextAlignment="Center"/>
+               HorizontalTextAlignment="Center"
+               TextColor="#8B0000"/>
             </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>

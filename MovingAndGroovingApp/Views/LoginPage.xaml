@@ -7,7 +7,7 @@
              >
 
     <ScrollView >
-        <VerticalStackLayout Padding="10" Spacing="15" BackgroundColor="GhostWhite">
+        <VerticalStackLayout Padding="10" Spacing="15" BackgroundColor="SkyBlue">
             <Image Source="logo_color.png" 
                HeightRequest="450" 
                WidthRequest="450"/>

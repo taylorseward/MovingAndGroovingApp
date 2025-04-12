@@ -18,6 +18,12 @@
                     BackgroundColor="#A9A9A9"
                     TextColor="#8B0000"/>
 
+            <Entry x:Name="hoursEntry"
+                    Placeholder="Hours"
+                    Keyboard="Numeric"
+                    WidthRequest="450"
+                    HorizontalTextAlignment="Center"
+                    FontSize="20"/>
             <Entry x:Name="minutesEntry"
                    Placeholder="Minutes"
                    Keyboard="Numeric"

@@ -20,6 +20,10 @@ namespace MovingAndGroovingApp
             // Workout Routing
             Routing.RegisterRoute(nameof(WorkoutLog), typeof(WorkoutLog));
             Routing.RegisterRoute(nameof(AddWorkoutPage), typeof(AddWorkoutPage));
+
+            // Login & Register Routing
+            Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
+            Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage));
         }
     }
 }

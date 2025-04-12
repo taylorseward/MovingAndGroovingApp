@@ -1,4 +1,4 @@
-﻿using GuitarStore.ViewModels;
+﻿using MovingAndGroovingApp.ViewModels;
 using MovingAndGroovingApp.Models;
 using MovingAndGroovingApp.Services;
 using System;

@@ -9,6 +9,10 @@
     Title="MovingAndGroovingApp">
 
     <ShellContent
+     Title="Login"
+     ContentTemplate="{DataTemplate views:LoginPage}"
+     Route="LoginPage" />
+    <ShellContent
         Title="Workout Log"
         ContentTemplate="{DataTemplate views:WorkoutLogPage}"
         Route="WorkoutLogPage" />

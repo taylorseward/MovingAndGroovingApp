@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
-using GuitarStore.ViewModels;
+using MovingAndGroovingApp.ViewModels;
 using MovingAndGroovingApp.Models;
 using MovingAndGroovingApp.Services;
 

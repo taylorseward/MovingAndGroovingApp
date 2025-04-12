@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using MovingAndGroovingApp.Models;
 using MovingAndGroovingApp.Services;
+using MovingAndGroovingApp.ViewModels;
 using MovingAndGroovingApp.Views;
 
 namespace MovingAndGroovingApp
@@ -24,9 +25,17 @@ namespace MovingAndGroovingApp
             // Workouts
             builder.Services.AddSingleton<WorkoutLog>();
             builder.Services.AddSingleton<AddWorkoutPage>();
+            builder.Services.AddSingleton<WorkoutLogViewModel>();
+            builder.Services.AddTransient<AddWorkoutViewModel>();
+
+            // Login & Register
+            builder.Services.AddSingleton<LoginPage>();
+            builder.Services.AddSingleton<RegisterPage>();
+            builder.Services.AddSingleton<LoginViewModel>();
+            builder.Services.AddSingleton<RegisterViewModel>();
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

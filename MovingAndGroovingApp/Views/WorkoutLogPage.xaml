@@ -15,7 +15,7 @@
             <DataTemplate>
                 <VerticalStackLayout BackgroundColor="GhostWhite">
                     <Label Text="{Binding WorkoutType}"/>
-                    <Label Text="{Binding Minutes}"/>
+                    <Label Text="{Binding FormattedTime}" />
                     <Label Text="{Binding Date, StringFormat='{}{0:MMM dd, yyyy}'}" />
                 </VerticalStackLayout>
             </DataTemplate>

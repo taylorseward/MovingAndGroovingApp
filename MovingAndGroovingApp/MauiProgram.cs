@@ -1,4 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using MovingAndGroovingApp.Models;
+using MovingAndGroovingApp.Services;
+using MovingAndGroovingApp.Views;
 
 namespace MovingAndGroovingApp
 {
@@ -14,6 +17,13 @@ namespace MovingAndGroovingApp
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+
+            // Database
+            builder.Services.AddSingleton<DatabaseService>();
+
+            // Workouts
+            builder.Services.AddSingleton<WorkoutLog>();
+            builder.Services.AddSingleton<AddWorkoutPage>();
 
 #if DEBUG
     		builder.Logging.AddDebug();

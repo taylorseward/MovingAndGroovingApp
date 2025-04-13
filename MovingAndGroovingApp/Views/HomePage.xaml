@@ -5,7 +5,7 @@
              xmlns:viewmodels="clr-namespace:MovingAndGroovingApp.ViewModels"
              Title="HomePage">
     <ScrollView>
-        <VerticalStackLayout Padding="10" Spacing="15" BackgroundColor="GhostWhite">
+        <VerticalStackLayout Padding="10" Spacing="15" BackgroundColor="#A9A9A9">
             <Image Source="logo_color.png" 
             HeightRequest="450" 
             WidthRequest="450"/>
@@ -17,12 +17,12 @@
             <Button Text="Your Workouts" 
                 Clicked="OnWorkoutsClicked" 
                 WidthRequest="450" 
-                BackgroundColor="CornflowerBlue" 
+                BackgroundColor="#8B0000"
                 FontSize="20"/>
             <Button Text="Teams"
                     Clicked="OnTeamClicked"
                     WidthRequest="450"
-                    BackgroundColor="CornflowerBlue"
+                    BackgroundColor="#8B0000"
                     FontSize="20"/>
             <VerticalStackLayout>
                 <Label Text="© Moving And Grooving Bay Bay! - 2025" 

@@ -20,5 +20,9 @@
         Title="Workout Log"
         ContentTemplate="{DataTemplate views:WorkoutLogPage}"
         Route="WorkoutLogPage" />
+    <ShellContent
+        Title="Teams"
+        ContentTemplate="{DataTemplate views:TeamPage}"
+        Route="TeamPage" />
 
 </Shell>

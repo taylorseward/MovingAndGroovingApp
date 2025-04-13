@@ -23,7 +23,10 @@
                     Keyboard="Numeric"
                     WidthRequest="450"
                     HorizontalTextAlignment="Center"
-                    FontSize="20"/>
+                    FontSize="20"
+                    BackgroundColor="#A9A9A9"
+                    TextColor="#8B0000"
+                    PlaceholderColor="#505050"/>
             <Entry x:Name="minutesEntry"
                    Placeholder="Minutes"
                    Keyboard="Numeric"

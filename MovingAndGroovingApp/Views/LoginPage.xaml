@@ -7,28 +7,32 @@
              >
 
     <ScrollView >
-        <VerticalStackLayout Padding="10" Spacing="15" BackgroundColor="SkyBlue">
+        <VerticalStackLayout Padding="10" Spacing="15" BackgroundColor="#A9A9A9">
             <Image Source="logo_color.png" 
                HeightRequest="450" 
                WidthRequest="450"/>
             <Entry Text="{Binding Username}" 
                Placeholder="Username" 
                WidthRequest="450"
-               HorizontalTextAlignment="Center"/>
+               HorizontalTextAlignment="Center"
+               BackgroundColor="#2E2E2E"
+               TextColor="#8B0000"/>
             <Entry Text="{Binding Password}" 
                Placeholder="Password" 
                IsPassword="True" 
                WidthRequest="450"
-               HorizontalTextAlignment="Center"/>
+               HorizontalTextAlignment="Center"
+               BackgroundColor="#2E2E2E"
+               TextColor="#8B0000"/>
             <Button Text="Login" 
                 Command="{Binding LoginCommand}"
                 WidthRequest="450" 
-                BackgroundColor="CornflowerBlue" 
+                BackgroundColor="#8B0000" 
                 FontSize="20"/>
             <Button Text="Register" 
                 Command="{Binding NavigateToRegisterCommand}" 
                 WidthRequest="450" 
-                BackgroundColor="CornflowerBlue" 
+                BackgroundColor="#8B0000"
                 FontSize="20"/>
             <VerticalStackLayout>
                 <Label Text="© Moving And Grooving Bay Bay! - 2025" 

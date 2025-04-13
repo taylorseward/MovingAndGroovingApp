@@ -6,33 +6,36 @@
              Title="Manage Teams">
 
     <ScrollView>
-        <VerticalStackLayout Padding="15" Spacing="15">
+        <VerticalStackLayout Padding="15" Spacing="15" BackgroundColor="#2E2E2E">
 
             <!-- Buttons to create or join teams -->
             <Button Text="Create Your Team" 
                     Command="{Binding CreateTeamCommand}"
-                    BackgroundColor="CornflowerBlue" 
                     WidthRequest="450"
-                    TextColor="White" 
-                    FontSize="20"/>
+                    FontSize="20"
+                    BackgroundColor="#8B0000"
+                    TextColor="#A9A9A9"/>
 
             <Button Text="Join an Existing Team"
                     Command="{Binding JoinTeamCommand}" 
-                    BackgroundColor="CornflowerBlue" 
                     WidthRequest="450"
-                    TextColor="White" 
-                    FontSize="20"/>
+                    FontSize="20"
+                    BackgroundColor="#8B0000"
+                    TextColor="#A9A9A9"/>
 
             <!-- Existing teams -->
-            <CollectionView ItemsSource="{Binding Teams}" SelectionMode="Single" WidthRequest="450">
+            <CollectionView ItemsSource="{Binding Teams}" SelectionMode="Single" WidthRequest="450" >
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Padding="10" Margin="10">
                             <StackLayout>
                                 <Image Source="{Binding TeamPhotoPath}" HeightRequest="100" />
-                                <Label Text="{Binding TeamName}" FontSize="20" HorizontalOptions="Center"/>
-                                <Label Text="{Binding TeamDescription}" FontSize="14" HorizontalOptions="Center"/>
-                                <Label Text="{Binding TeamTotalMinutes, StringFormat='Total Minutes: {0}'}" FontSize="12" HorizontalOptions="Center"/>
+                                <Label Text="{Binding TeamName}" FontSize="20" HorizontalOptions="Center" BackgroundColor="#8B0000"
+                                TextColor="#A9A9A9"/>
+                                <Label Text="{Binding TeamDescription}" FontSize="14" HorizontalOptions="Center" BackgroundColor="#8B0000"
+                                TextColor="#A9A9A9"/>
+                                <Label Text="{Binding TeamTotalMinutes, StringFormat='Total Minutes: {0}'}" FontSize="12" HorizontalOptions="Center" BackgroundColor="#8B0000"
+                                TextColor="#A9A9A9"/>
                             </StackLayout>
                         </Border>
                     </DataTemplate>

@@ -3,17 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:MovingAndGroovingApp.ViewModels"
              x:Class="MovingAndGroovingApp.Views.CreateTeamPage"
-             Title="Create Team">
+             Title="Create A Team">
 
-    <VerticalStackLayout Padding="15" Spacing="15">
-        <!-- Team Name -->
-        <Entry Placeholder="Team Name" Text="{Binding TeamName}" />
-
-        <!-- Team Description -->
-        <Editor Placeholder="Team Description" Text="{Binding TeamDescription}" />
-
-        <!-- Create Button -->
-        <Button Text="Create Team" Command="{Binding CreateTeamCommand}" BackgroundColor="CornflowerBlue" TextColor="White" />
+    <VerticalStackLayout Padding="15" Spacing="15" BackgroundColor="#A9A9A9">
+        <Entry Placeholder="Team Name" Text="{Binding TeamName}" WidthRequest="450" BackgroundColor="#2E2E2E" TextColor="#8B0000"/>
+        <Editor Placeholder="Team Description" Text="{Binding TeamDescription}" WidthRequest="450" BackgroundColor="#2E2E2E"
+        TextColor="#8B0000"/>
+        <Button Text="Create Team" Command="{Binding CreateTeamCommand}" WidthRequest="450" BackgroundColor="#8B0000"
+        TextColor="#A9A9A9"/>
     </VerticalStackLayout>
 
 </ContentPage>

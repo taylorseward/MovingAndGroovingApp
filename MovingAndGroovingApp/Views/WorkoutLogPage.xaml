@@ -28,7 +28,7 @@
                            FontAttributes="Bold"
                            TextColor="#8B0000"/>
 
-                    <Label Text="{Binding Minutes, StringFormat='{0} mins'}"
+                    <Label Text="{Binding FormattedTime}"
                            FontSize="16"
                            TextColor="#505050"/>
 

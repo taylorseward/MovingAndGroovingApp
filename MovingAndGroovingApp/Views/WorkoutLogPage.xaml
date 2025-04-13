@@ -1,43 +1,45 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MovingAndGroovingApp.Views.WorkoutLogPage"
-             Title="WorkoutLogPage"
-             BackgroundColor="#2E2E2E">
+             Title="Workout Log"
+             BackgroundColor="#A9A9A9">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Log Workout"
                      Clicked="OnAddWorkoutClicked"
-                     Order="Primary"/>
+                     Order="Primary" />
     </ContentPage.ToolbarItems>
 
-    <CollectionView ItemsSource="{Binding Workouts}"
-                    Margin="10,10,10,10"
-                    SelectionMode="Single">
-        <CollectionView.ItemsLayout>
-            <LinearItemsLayout Orientation="Vertical" ItemSpacing="15"/>
-        </CollectionView.ItemsLayout>
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
+    <VerticalStackLayout Padding="10">
 
-                <VerticalStackLayout BackgroundColor="#A9A9A9"
-                    Padding="15">
+        <!-- Table Header -->
+        <Grid ColumnDefinitions="*,*,*"
+              Padding="5"
+              BackgroundColor="#404040">
+            <Label Text="Workout" TextColor="White" FontAttributes="Bold"/>
+            <Label Text="Time" TextColor="White" FontAttributes="Bold" Grid.Column="1"/>
+            <Label Text="Date" TextColor="White" FontAttributes="Bold" Grid.Column="2"/>
+        </Grid>
 
-                    <Label Text="{Binding WorkoutType}"
-                           FontSize="18"
-                           FontAttributes="Bold"
-                           TextColor="#8B0000"/>
-
-                    <Label Text="{Binding FormattedTime}"
-                           FontSize="16"
-                           TextColor="#505050"/>
-
-                    <Label Text="{Binding Date, StringFormat='{}{0:MMM dd, yyyy}'}"
-                           FontSize="14"
-                           TextColor="#696969"/>
-
-                </VerticalStackLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+        <!-- Table Rows -->
+        <CollectionView ItemsSource="{Binding Workouts}"
+                        Margin="0,2,0,0"
+                        SelectionMode="Single">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="5"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,*,*"
+                          Padding="2"
+                          BackgroundColor="#A9A9A9"
+                          >
+                        <Label Text="{Binding WorkoutType}" Grid.Column="0" TextColor="#8B0000" />
+                        <Label Text="{Binding FormattedTime}" Grid.Column="1" TextColor="#505050" />
+                        <Label Text="{Binding Date, StringFormat='{}{0:MMM dd, yyyy}'}" Grid.Column="2" TextColor="#696969" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
 </ContentPage>

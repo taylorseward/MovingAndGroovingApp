@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:MovingAndGroovingApp.ViewModels"
+             x:Class="MovingAndGroovingApp.Views.CreateTeamPage"
+             Title="Create Team">
+
+    <VerticalStackLayout Padding="15" Spacing="15">
+        <!-- Team Name -->
+        <Entry Placeholder="Team Name" Text="{Binding TeamName}" />
+
+        <!-- Team Description -->
+        <Editor Placeholder="Team Description" Text="{Binding TeamDescription}" />
+
+        <!-- Create Button -->
+        <Button Text="Create Team" Command="{Binding CreateTeamCommand}" BackgroundColor="CornflowerBlue" TextColor="White" />
+    </VerticalStackLayout>
+
+</ContentPage>

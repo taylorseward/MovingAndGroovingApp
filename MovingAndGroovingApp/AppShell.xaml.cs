@@ -27,6 +27,11 @@ namespace MovingAndGroovingApp
 
             // Home Routing
             Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
+
+            // Team Routing
+            Routing.RegisterRoute(nameof(TeamPage), typeof(TeamPage));
+            Routing.RegisterRoute(nameof(CreateTeamPage), typeof(CreateTeamPage));
+            Routing.RegisterRoute(nameof(JoinTeamPage), typeof(JoinTeamPage));
         }
     }
 }

@@ -19,6 +19,11 @@
                 WidthRequest="450" 
                 BackgroundColor="CornflowerBlue" 
                 FontSize="20"/>
+            <Button Text="Teams"
+                    Clicked="OnTeamClicked"
+                    WidthRequest="450"
+                    BackgroundColor="CornflowerBlue"
+                    FontSize="20"/>
             <VerticalStackLayout>
                 <Label Text="© Moving And Grooving Bay Bay! - 2025" 
                HorizontalTextAlignment="Center"/>

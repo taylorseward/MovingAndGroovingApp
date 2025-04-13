@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MovingAndGroovingApp.Models
 {
-    class Team
+    public class Team
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

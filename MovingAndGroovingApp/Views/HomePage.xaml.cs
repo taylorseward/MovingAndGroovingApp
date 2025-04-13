@@ -18,4 +18,9 @@ public partial class HomePage : ContentPage
     {
         await Shell.Current.GoToAsync(nameof(WorkoutLogPage));
     }
+
+    public async void OnTeamClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(TeamPage));
+    }
 }

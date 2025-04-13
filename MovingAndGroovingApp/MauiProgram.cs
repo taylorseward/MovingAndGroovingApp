@@ -38,6 +38,14 @@ namespace MovingAndGroovingApp
             builder.Services.AddSingleton<HomePage>();
             builder.Services.AddSingleton<HomeViewModel>();
 
+            // Team
+            builder.Services.AddSingleton<TeamPage>();
+            builder.Services.AddSingleton<CreateTeamPage>();
+            builder.Services.AddSingleton<JoinTeamPage>();
+            builder.Services.AddSingleton<TeamViewModel>();
+            builder.Services.AddSingleton<CreateTeamViewModel>();
+            builder.Services.AddSingleton<JoinTeamViewModel>();
+
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

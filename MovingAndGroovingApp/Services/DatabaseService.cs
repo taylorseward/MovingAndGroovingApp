@@ -92,5 +92,88 @@ namespace MovingAndGroovingApp.Services
         {
             return _database.InsertAsync(user);
         }
+
+        // Team
+        // Get all teams
+        public async Task<List<Team>> GetAllTeamsAsync()
+        {
+            return await _database.Table<Team>().ToListAsync();
+        }
+
+        // Get a team by ID
+        public async Task<Team> GetTeamByIdAsync(int id)
+        {
+            return await _database.Table<Team>().Where(t => t.Id == id).FirstOrDefaultAsync();
+        }
+
+        // Add a new team
+        public async Task AddTeamAsync(Team team)
+        {
+            try
+            {
+                await _database.InsertAsync(team);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error adding team: {ex.Message}");
+                throw;
+            }
+        }
+
+        // Update an existing team
+        public async Task UpdateTeamAsync(Team team)
+        {
+            try
+            {
+                await _database.UpdateAsync(team);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error updating team: {ex.Message}");
+                throw;
+            }
+        }
+
+        // Delete a team
+        public async Task DeleteTeamAsync(Team team)
+        {
+            try
+            {
+                await _database.DeleteAsync(team);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error deleting team: {ex.Message}");
+                throw;
+            }
+        }
+
+        // Join a team (Add a user to the team)
+        public async Task JoinTeamAsync(Team team, User user)
+        {
+            try
+            {
+                // Assuming the User table has a TeamId column to associate the user with the team
+                user.TeamId = team.Id;
+                await _database.UpdateAsync(user);
+
+                // Optionally, you can also update the team's member list or a separate table for users in teams.
+                // E.g., you can create a UserTeams table to track users and their teams.
+
+                Console.WriteLine($"User {user.UserName} joined team {team.TeamName}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error joining team: {ex.Message}");
+                throw;
+            }
+        }
+
+        // Optionally, you could create a method to get users by their team id, if needed for displaying members.
+        public async Task<List<User>> GetUsersByTeamIdAsync(int teamId)
+        {
+            return await _database.Table<User>().Where(u => u.TeamId == teamId).ToListAsync();
+        }
+
     }
 }

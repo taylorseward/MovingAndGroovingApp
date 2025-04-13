@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:MovingAndGroovingApp.ViewModels"
+             x:Class="MovingAndGroovingApp.Views.TeamPage"
+             Title="Manage Teams">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="15">
+
+            <!-- Buttons to create or join teams -->
+            <Button Text="Create Your Team" 
+                    Command="{Binding CreateTeamCommand}"
+                    BackgroundColor="CornflowerBlue" 
+                    WidthRequest="450"
+                    TextColor="White" 
+                    FontSize="20"/>
+
+            <Button Text="Join an Existing Team"
+                    Command="{Binding JoinTeamCommand}" 
+                    BackgroundColor="CornflowerBlue" 
+                    WidthRequest="450"
+                    TextColor="White" 
+                    FontSize="20"/>
+
+            <!-- Existing teams -->
+            <CollectionView ItemsSource="{Binding Teams}" SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="10" Margin="10" BorderColor="Gray">
+                            <StackLayout>
+                                <Image Source="{Binding TeamPhotoPath}" HeightRequest="100"/>
+                                <Label Text="{Binding TeamName}" FontSize="20" HorizontalOptions="Center"/>
+                                <Label Text="{Binding TeamDescription}" FontSize="14" HorizontalOptions="Center"/>
+                                <Label Text="{Binding TeamTotalMinutes, StringFormat='Total Minutes: {0}'}" FontSize="12" HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

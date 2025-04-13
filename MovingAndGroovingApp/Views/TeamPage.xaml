@@ -24,17 +24,17 @@
                     FontSize="20"/>
 
             <!-- Existing teams -->
-            <CollectionView ItemsSource="{Binding Teams}" SelectionMode="Single">
+            <CollectionView ItemsSource="{Binding Teams}" SelectionMode="Single" WidthRequest="450">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Padding="10" Margin="10" BorderColor="Gray">
+                        <Border Padding="10" Margin="10">
                             <StackLayout>
-                                <Image Source="{Binding TeamPhotoPath}" HeightRequest="100"/>
+                                <Image Source="{Binding TeamPhotoPath}" HeightRequest="100" />
                                 <Label Text="{Binding TeamName}" FontSize="20" HorizontalOptions="Center"/>
                                 <Label Text="{Binding TeamDescription}" FontSize="14" HorizontalOptions="Center"/>
                                 <Label Text="{Binding TeamTotalMinutes, StringFormat='Total Minutes: {0}'}" FontSize="12" HorizontalOptions="Center"/>
                             </StackLayout>
-                        </Frame>
+                        </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
